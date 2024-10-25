@@ -17,40 +17,41 @@ public class PruebaCasas {
         otraCasa = miCasa;
         miCasa = new Casa();
         System.out.println("miCasa: " + miCasa + ", otraCasa " + otraCasa);
-        System.out.println("miCasa [Color: " + miCasa.color + ", Precio: $" + miCasa.precio + "]");
+        System.out.println("miCasa [Color: " + miCasa.getColor() + ", Precio: $" + miCasa.getPrecio() + "]");
 
-        otraCasa.precio = 100;
-        otraCasa.ventanas = 20;
-        otraCasa.color = "Blanco";
-        System.out.println("otraCasa [Color: " + otraCasa.color + ", Precio: $" + otraCasa.precio + "]");
+        otraCasa.setPrecio(100);
+        otraCasa.setVentanas(20);
+        otraCasa.setColor("Blanco");
+        System.out.println("otraCasa [Color: " + otraCasa.getColor() + ", Precio: $" + otraCasa.getPrecio() + "]");
 
         System.out.println("Paso de objetos como parámetro");
         numero = 100;
-        otraCasa.color = "Rojo";
+        otraCasa.setColor("Rojo");
         subrutina(numero, otraCasa);
-        System.out.println(numero + " ++ " + otraCasa.color);
+        System.out.println(numero + " ++ " + otraCasa.getColor());
 
 
         // Instanciación de otra clase (Cliente)
         Cliente ana = new Cliente();
-        ana.edad = 99;
-        ana.id= 12345;
-        ana.genero = 'F';
-        ana.nombre = "Ana Luccía Pérez Andrade";
+        ana.setEdad(99);
+        ana.setId(12345);
+        ana.setGenero('F');
+        ana.setNombre("Ana Luccía Pérez Andrade");
 
 
         Cliente luis = new Cliente();
-        luis.nombre = "Luis Benitez Pérez";
-        luis.edad = 50;
-        luis.genero = 'M';
+        luis.setNombre("Luis Benitez Pérez");
+        luis.setEdad(50);
+        luis.setGenero('M');
 
     }
 
     public static void subrutina(int numero, Casa casa) {
-        System.out.println(numero + " .. " + casa.color);
+        System.out.println(numero + " .. " + casa.getColor());
         numero = 200;
-        casa.color = "Azul";
-        System.out.println(numero + " -- " + casa.color);
+        casa.setColor("Azul");
+        System.out.println(numero + " -- " + casa.getColor());
+        System.out.println("Tdse");
     }
 
 }
