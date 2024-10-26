@@ -32,3 +32,4 @@ bin/
 
 ## Archivos con extensión temporal
 *.java~
+/dj16-segunda-entrega.iml
