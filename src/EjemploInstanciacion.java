@@ -3,6 +3,27 @@ public class EjemploInstanciacion {
     public static void main(String[] args) {
 
         System.out.println("Otro de ejemplo de creación de objetos");
+        ClaseConEstaticos objeto1 = new ClaseConEstaticos();
+        ClaseConEstaticos objeto2 = new ClaseConEstaticos();
+        System.out.println("Atributos no Estáticos");
+        objeto1.atributoNoEstatico = 100;
+        objeto2.atributoNoEstatico = 200;
+        System.out.println("Objeto 1: " + objeto1.atributoNoEstatico);
+        System.out.println("Objeto 2: " + objeto2.atributoNoEstatico);
+
+        System.out.println("Atributos Estáticos");
+        System.out.println("Elemento estático: " + ClaseConEstaticos.atributoEstatico);
+        ClaseConEstaticos.atributoEstatico = 10;
+        System.out.println("Elemento estático: " + ClaseConEstaticos.atributoEstatico);
+        System.out.println();
+
+        // Métodos
+        objeto1.metodoNoEstatico();
+        int resultado = ClaseConEstaticos.metodoEstatico(10);
+        System.out.println("Resultado: " + resultado);
+        System.out.println();
+
+
         CuentaBancaria o1 = new CuentaBancaria();
         System.out.println(o1);
         CuentaBancaria o2 = new CuentaBancaria();

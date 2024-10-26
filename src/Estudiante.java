@@ -1,4 +1,4 @@
-public class Estudiante extends Persona {
+public final class Estudiante extends Persona implements MetodosComunes {
     // Estudiante es Persona
     // Estudiante es una subclase de Persona
 
@@ -42,11 +42,31 @@ public class Estudiante extends Persona {
     }
 
     @Override
+    public boolean alta() {
+        return true;
+    }
+
+    @Override
     public String toString() {
         return "Estudiante{" +
                "matricula=" + matricula +
                ", carrera='" + carrera + '\'' +
                ", [" + super.toString() + "]" +
                '}';
+    }
+
+    @Override
+    public boolean altaBBDD() {
+        return false;
+    }
+
+    @Override
+    public boolean bajaBBDD() {
+        return false;
+    }
+
+    @Override
+    public int cambioBBDD() {
+        return 0;
     }
 }

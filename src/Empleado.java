@@ -1,4 +1,6 @@
-public class Empleado extends Persona {
+import java.io.Serializable;
+
+public class Empleado extends Persona implements MetodosComplementarios {
     // Atributos
     private int numeroEmpleado;
     private char turno;
@@ -42,7 +44,37 @@ public class Empleado extends Persona {
     }
 
     @Override
+    public boolean alta() {
+        return false;
+    }
+
+    @Override
     public String toString() {
         return "Empleado " + getNumeroEmpleado() + ", Turno: " + getTurno() + ", [ " + super.toString() + " ]";
+    }
+
+    @Override
+    public String reporte(int numero) {
+        return "";
+    }
+
+    @Override
+    public boolean respalda(String destino) {
+        return false;
+    }
+
+    @Override
+    public boolean altaBBDD() {
+        return false;
+    }
+
+    @Override
+    public boolean bajaBBDD() {
+        return false;
+    }
+
+    @Override
+    public int cambioBBDD() {
+        return 0;
     }
 }

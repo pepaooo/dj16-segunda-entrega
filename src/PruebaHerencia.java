@@ -3,12 +3,17 @@ public class PruebaHerencia {
         System.out.println("Ejemplo de herencia");
 
         // Personas
-        Persona p1 = new Persona();
-        System.out.println(p1);
-        p1.setNombre("Jose");
-        p1.setEdad(39);
-        p1.setGenero('M');
-        System.out.println("\t" + p1);
+//        Persona p1 = new Persona() {
+//            @Override
+//            public boolean alta() {
+//                return false;
+//            }
+//        };
+//        System.out.println(p1);
+//        p1.setNombre("Jose");
+//        p1.setEdad(39);
+//        p1.setGenero('M');
+//        System.out.println("\t" + p1);
 
         // Estudiantes
         Estudiante e1 = new Estudiante();

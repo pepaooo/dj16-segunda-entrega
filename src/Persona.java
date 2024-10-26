@@ -1,4 +1,4 @@
-public class Persona {
+public abstract class Persona {
     // Atributos
     private String nombre;
     private char genero;
@@ -43,6 +43,9 @@ public class Persona {
         if (edad >= 0)
             this.edad = edad;
     }
+
+    // Definición de un metodo abstract
+    public abstract boolean alta();
 
     @Override
     public String toString() {

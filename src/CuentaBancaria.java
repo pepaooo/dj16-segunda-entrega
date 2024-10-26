@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.util.StringJoiner;
 
 // José Angulo
-public class CuentaBancaria {
+public class CuentaBancaria implements MetodosComunes {
 
     private int numeroCuenta;
     private String nombreCliente;
@@ -108,5 +109,20 @@ public class CuentaBancaria {
                 .add("nombreCliente='" + nombreCliente + "'")
                 .add("saldo=" + saldo)
                 .toString();
+    }
+
+    @Override
+    public boolean altaBBDD() {
+        return false;
+    }
+
+    @Override
+    public boolean bajaBBDD() {
+        return false;
+    }
+
+    @Override
+    public int cambioBBDD() {
+        return 0;
     }
 }
