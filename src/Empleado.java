@@ -43,10 +43,10 @@ public class Empleado extends Persona implements MetodosComplementarios {
             super.setEdad(edad);
     }
 
-    @Override
-    public boolean alta() {
-        return false;
-    }
+//    @Override
+//    public boolean alta() {
+//        return false;
+//    }
 
     @Override
     public String toString() {

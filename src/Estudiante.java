@@ -41,10 +41,10 @@ public final class Estudiante extends Persona implements MetodosComunes {
         }
     }
 
-    @Override
-    public boolean alta() {
-        return true;
-    }
+//    @Override
+//    public boolean alta() {
+//        return true;
+//    }
 
     @Override
     public String toString() {

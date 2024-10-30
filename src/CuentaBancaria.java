@@ -1,4 +1,5 @@
 import java.io.Serializable;
+import java.util.Objects;
 import java.util.StringJoiner;
 
 // José Angulo
@@ -102,14 +103,6 @@ public class CuentaBancaria implements MetodosComunes {
                '}';
     }*/
 
-    @Override
-    public String toString() {
-        return new StringJoiner(", ", CuentaBancaria.class.getSimpleName() + "[", "]")
-                .add("numeroCuenta=" + numeroCuenta)
-                .add("nombreCliente='" + nombreCliente + "'")
-                .add("saldo=" + saldo)
-                .toString();
-    }
 
     @Override
     public boolean altaBBDD() {
@@ -124,5 +117,27 @@ public class CuentaBancaria implements MetodosComunes {
     @Override
     public int cambioBBDD() {
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "CuentaBancaria [" +
+                "numeroCuenta=" + numeroCuenta +
+                ", nombreCliente='" + nombreCliente + '\'' +
+                ", saldo=" + saldo +
+                ']';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CuentaBancaria that = (CuentaBancaria) o;
+        return numeroCuenta == that.numeroCuenta;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(numeroCuenta);
     }
 }

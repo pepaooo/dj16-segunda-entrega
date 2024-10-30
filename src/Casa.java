@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 // Jose Angulo
 public class Casa {
     // Atributos
@@ -93,5 +95,16 @@ public class Casa {
         this.color = nuevoColor;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Casa casa = (Casa) o;
+        return tamano == casa.tamano && niveles == casa.niveles;
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(tamano, niveles);
+    }
 }

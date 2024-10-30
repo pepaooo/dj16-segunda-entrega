@@ -1,4 +1,4 @@
-public abstract class Persona {
+public class Persona {
     // Atributos
     private String nombre;
     private char genero;
@@ -45,7 +45,7 @@ public abstract class Persona {
     }
 
     // Definición de un metodo abstract
-    public abstract boolean alta();
+    //public abstract boolean alta();
 
     @Override
     public String toString() {

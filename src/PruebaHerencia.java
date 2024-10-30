@@ -3,17 +3,12 @@ public class PruebaHerencia {
         System.out.println("Ejemplo de herencia");
 
         // Personas
-//        Persona p1 = new Persona() {
-//            @Override
-//            public boolean alta() {
-//                return false;
-//            }
-//        };
-//        System.out.println(p1);
-//        p1.setNombre("Jose");
-//        p1.setEdad(39);
-//        p1.setGenero('M');
-//        System.out.println("\t" + p1);
+        Persona p1 = new Persona();
+        System.out.println(p1);
+        p1.setNombre("Jose");
+        p1.setEdad(39);
+        p1.setGenero('M');
+        System.out.println("\t" + p1);
 
         // Estudiantes
         Estudiante e1 = new Estudiante();
@@ -40,5 +35,16 @@ public class PruebaHerencia {
         emp1.setTurno('V');
         emp1.setEdad(30);
         System.out.println("\t" + emp1);
+
+        // Polimorfismo
+        emp1.setNombre("Pepe"); // emp1 se comporta como Persona
+        emp1.setTurno('M'); // emp1 se comporta como Empleado
+        emp1.setEdad(56); // emp1 se comporta como Empleado
+        System.out.println("\t" + emp1);
+
+        // Superclase clase = new SubClase();
+        Persona o1 = new Empleado();
+        Persona o2 = new Estudiante();
+
     }
 }
